@@ -18,7 +18,8 @@ Learn more about the challenge here: [8 Week SQL Challenge](https://8weeksqlchal
 **Skills**: Basic SQL queries, joins, window functions.
 
 **Key Insights**:
-- [Link to Case Study #1 Solution](./Case%20Study%20#1%20-%20Dannys%20Diner/Dannys_diner_solutions.md)
+- [Link to Case Study #1 Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%231%20-%20Dannys%20Diner/Dannys_diner_solutions.md)
+
 
 ---
 
@@ -35,7 +36,7 @@ Learn more about the challenge here: [8 Week SQL Challenge](https://8weeksqlchal
 ## Progress Tracker
 | Case Study  | Status      | Link to Solution          |
 |-------------|-------------|---------------------------|
-| Danny's Diner | ✅ Completed | [Solution](./Case%20Study%20#1%20-%20Dannys%20Diner/Dannys_diner_solutions.md) |
+| Danny's Diner | ✅ Completed | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%231%20-%20Dannys%20Diner/Dannys_diner_solutions.md) |
 | Pizza Runner | ⏳ In Progress |                           |
 | Foodie-Fi    | ❌ Not Started |                           |
 
