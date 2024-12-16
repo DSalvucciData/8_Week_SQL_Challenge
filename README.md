@@ -29,8 +29,6 @@ Learn more about the challenge here: [8 Week SQL Challenge](https://8weeksqlchal
 - Delivery performance analysis
 - Customer behavior insights
 
-**Key Insights**:
-- [Link to Case Study #2 Solution](Dannys_diner_solutions.md)
 
 ---
 
