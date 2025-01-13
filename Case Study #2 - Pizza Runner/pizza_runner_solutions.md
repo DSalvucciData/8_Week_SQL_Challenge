@@ -543,10 +543,10 @@ LIMIT 1
 + -------------- + ----------- +
 ```
 4. Generate an order item for each record in the customers_orders table in the format of one of the following:
--- Meat Lovers
--- Meat Lovers - Exclude Beef
--- Meat Lovers - Extra Bacon
--- Meat Lovers - Exclude Cheese, Bacon - Extra Mushroom, Peppers
+ - Meat Lovers
+ - Meat Lovers - Exclude Beef
+ - Meat Lovers - Extra Bacon
+ - Meat Lovers - Exclude Cheese, Bacon - Extra Mushroom, Peppers
 
 ```sql
 WITH EXTRAS AS (
@@ -605,24 +605,25 @@ LEFT JOIN EXTRAS AS ext ON co.order_id = ext.order_id AND co.pizza_id = ext.pizz
 LEFT JOIN EXCLUDED AS exc ON co.order_id = exc.order_id AND co.pizza_id = exc.pizza_id AND exc.exclusions = co.exclusions
 INNER JOIN pizza_names AS pn ON pn.pizza_id = co.pizza_id
 
-+ ------------- + --------------- + ---------------- + ------------ + ------------------ +
-| order_id      | pizza_name      | added_extra      | exluded      | order_details      |
-+ ------------- + --------------- + ---------------- + ------------ + ------------------ +
-| 1             | Meatlovers      |                  |              | Meat Lovers        |
-| 2             | Meatlovers      |                  |              | Meat Lovers        |
-| 3             | Meatlovers      |                  |              | Meat Lovers        |
-| 3             | Vegetarian      |                  |              | Vegetarian         |
-| 4             | Meatlovers      |                  | 4            | Meat Lovers - Exclude Cheese |
-| 4             | Meatlovers      |                  | 4            | Meat Lovers - Exclude Cheese |
-| 4             | Vegetarian      |                  | 4            | Vegetarian - Exclude Cheese |
-| 5             | Meatlovers      | 1                |              | Meat Lovers - Extra Bacon |
-| 6             | Vegetarian      |                  |              | Vegetarian         |
-| 7             | Vegetarian      | 1                |              | Vegetarian - Extra Bacon |
-| 8             | Meatlovers      |                  |              | Meat Lovers        |
-| 9             | Meatlovers      | 1, 5             | 4            | Meat Lovers - Extra Bacon, Chicken - Exclude Cheese |
-| 10            | Meatlovers      |                  |              | Meat Lovers        |
-| 10            | Meatlovers      | 1, 4             | 2, 6         | Meat Lovers - Extra Bacon, Cheese - Exclude BBQ Sauce, Mushrooms |
-+ ------------- + --------------- + ---------------- + ------------ + ------------------ +
++----------+-------------+-------------+----------+---------------------------------------------------------+
+| order_id | pizza_name  | added_extra | excluded | order_details                                           |
++----------+-------------+-------------+----------+---------------------------------------------------------+
+| 1        | Meatlovers  |             |          | Meat Lovers                                             |
+| 2        | Meatlovers  |             |          | Meat Lovers                                             |
+| 3        | Meatlovers  |             |          | Meat Lovers                                             |
+| 3        | Vegetarian  |             |          | Vegetarian                                              |
+| 4        | Meatlovers  |             | 4        | Meat Lovers - Exclude Cheese                            |
+| 4        | Meatlovers  |             | 4        | Meat Lovers - Exclude Cheese                            |
+| 4        | Vegetarian  |             | 4        | Vegetarian - Exclude Cheese                             |
+| 5        | Meatlovers  | 1           |          | Meat Lovers - Extra Bacon                               |
+| 6        | Vegetarian  |             |          | Vegetarian                                              |
+| 7        | Vegetarian  | 1           |          | Vegetarian - Extra Bacon                                |
+| 8        | Meatlovers  |             |          | Meat Lovers                                             |
+| 9        | Meatlovers  | 1, 5        | 4        | Meat Lovers - Extra Bacon, Chicken - Exclude Cheese     |
+| 10       | Meatlovers  |             |          | Meat Lovers                                             |
+| 10       | Meatlovers  | 1, 4        | 2, 6     | Meat Lovers - Extra Bacon, Cheese - Exclude BBQ Sauce,  |
+|          |             |             |          | Mushrooms                                               |
++----------+-------------+-------------+----------+---------------------------------------------------------+
 ```
 5. Generate an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table and add a 2x in front of any relevant ingredients
 - For example: "Meat Lovers: 2xBacon, Beef, ... , Salami"
@@ -739,22 +740,24 @@ SELECT
         pizza_name = 'Meatlovers' THEN 'Meat Lovers' ELSE pizza_name END, ': ', ingred) AS ingredient_list
 FROM 
     SUMMARY
------- + -------------------- +
-| order_id      | ingredient_list      |
-+ ------------- + -------------------- +
-| 1             | Meat Lovers: Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami |
-| 2             | Meat Lovers: Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami |
-| 3             | Meat Lovers: Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami |
-| 3             | Vegetarian: Cheese, Mushrooms, Onions, Peppers, Tomato Sauce, Tomatoes |
-| 4             | Meat Lovers: 2xBacon, 2xBBQ Sauce, 2xBeef, 2xChicken, 2xMushrooms, 2xPepperoni, 2xSalami |
-| 4             | Vegetarian: Mushrooms, Onions, Peppers, Tomato Sauce, Tomatoes |
-| 5             | Meat Lovers: 2xBacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami |
-| 6             | Vegetarian: Cheese, Mushrooms, Onions, Peppers, Tomato Sauce, Tomatoes |
-| 7             | Vegetarian: Bacon, Cheese, Mushrooms, Onions, Peppers, Tomato Sauce, Tomatoes |
-| 8             | Meat Lovers: Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami |
-| 9             | Meat Lovers: 2xBacon, 2xChicken, BBQ Sauce, Beef, Mushrooms, Pepperoni, Salami |
-| 10            | Meat Lovers: 2xBeef, 2xChicken, 2xPepperoni, 2xSalami, 3xBacon, 3xCheese |
-+ ------------- + -------------------- +
+
++----------+----------------------------------------------------------------------------------------------+
+| order_id | ingredient_list                                                                              |
++----------+----------------------------------------------------------------------------------------------+
+| 1        | Meat Lovers: Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami           |
+| 2        | Meat Lovers: Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami           |
+| 3        | Meat Lovers: Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami           |
+| 3        | Vegetarian: Cheese, Mushrooms, Onions, Peppers, Tomato Sauce, Tomatoes                       |
+| 4        | Meat Lovers: 2xBacon, 2xBBQ Sauce, 2xBeef, 2xChicken, 2xMushrooms, 2xPepperoni, 2xSalami     |
+| 4        | Vegetarian: Mushrooms, Onions, Peppers, Tomato Sauce, Tomatoes                               |
+| 5        | Meat Lovers: 2xBacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami         |
+| 6        | Vegetarian: Cheese, Mushrooms, Onions, Peppers, Tomato Sauce, Tomatoes                       |
+| 7        | Vegetarian: Bacon, Cheese, Mushrooms, Onions, Peppers, Tomato Sauce, Tomatoes                |
+| 8        | Meat Lovers: Bacon, BBQ Sauce, Beef, Cheese, Chicken, Mushrooms, Pepperoni, Salami           |
+| 9        | Meat Lovers: 2xBacon, 2xChicken, BBQ Sauce, Beef, Mushrooms, Pepperoni, Salami               |
+| 10       | Meat Lovers: 2xBeef, 2xChicken, 2xPepperoni, 2xSalami, 3xBacon, 3xCheese                     |
++----------+----------------------------------------------------------------------------------------------+
+
 ```
 
 6. What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?     
@@ -987,18 +990,19 @@ GROUP BY
 ORDER BY
     customer_id
 
-+ ---------------- + ------------- + -------------- + ----------- + --------------- + ---------------- + ---------------------------------- + ---------------------- + ------------------ + --------------------------- +
-| customer_id      | order_id      | runner_id      | rating      | order_time      | pickup_time      | time_between_order_and_pickup      | delivery_duration      | average_speed      | Total_number_of_pizzas      |
-+ ---------------- + ------------- + -------------- + ----------- + --------------- + ---------------- + ---------------------------------- + ---------------------- + ------------------ + --------------------------- +
-| 101              | 1             | 1              | 5           | 2020-01-01 18:05:02 | 2020-01-01 18:15:34 | 10                                 | 32                     | 38                 | 1                           |
-| 101              | 2             | 1              | 5           | 2020-01-01 19:00:52 | 2020-01-01 19:10:54 | 10                                 | 27                     | 44                 | 1                           |
-| 102              | 3             | 1              | 3           | 2020-01-02 23:51:23 | 2020-01-03 00:12:37 | 21                                 | 20                     | 39                 | 2                           |
-| 102              | 8             | 2              | 3           | 2020-01-09 23:54:33 | 2020-01-10 00:15:02 | 20                                 | 15                     | 92                 | 1                           |
-| 103              | 4             | 2              | 4           | 2020-01-04 13:23:46 | 2020-01-04 13:53:03 | 29                                 | 40                     | 34                 | 3                           |
-| 104              | 5             | 3              | 2           | 2020-01-08 21:00:29 | 2020-01-08 21:10:57 | 10                                 | 15                     | 40                 | 1                           |
-| 104              | 10            | 1              | 4           | 2020-01-11 18:34:49 | 2020-01-11 18:50:20 | 15                                 | 10                     | 60                 | 2                           |
-| 105              | 7             | 2              | 1           | 2020-01-08 21:20:29 | 2020-01-08 21:30:45 | 10                                 | 25                     | 60                 | 1                           |
-+ ---------------- + ------------- + -------------- + ----------- + --------------- + ---------------- + ---------------------------------- + ---------------------- + ------------------ + --------------------------- +
++--------------+-------------+-------------+----------+---------------------+---------------------+------------------------------+---------------------+-----------------+---------------------------+
+| customer_id  | order_id    | runner_id   | rating   | order_time          | pickup_time         | time_between_order_and_pickup| delivery_duration   | average_speed   | Total_number_of_pizzas    |
++--------------+-------------+-------------+----------+---------------------+---------------------+------------------------------+---------------------+-----------------+---------------------------+
+| 101          | 1           | 1           | 5        | 2020-01-01 18:05:02 | 2020-01-01 18:15:34 | 10                           | 32                  | 38              | 1                         |
+| 101          | 2           | 1           | 5        | 2020-01-01 19:00:52 | 2020-01-01 19:10:54 | 10                           | 27                  | 44              | 1                         |
+| 102          | 3           | 1           | 3        | 2020-01-02 23:51:23 | 2020-01-03 00:12:37 | 21                           | 20                  | 39              | 2                         |
+| 102          | 8           | 2           | 3        | 2020-01-09 23:54:33 | 2020-01-10 00:15:02 | 20                           | 15                  | 92              | 1                         |
+| 103          | 4           | 2           | 4        | 2020-01-04 13:23:46 | 2020-01-04 13:53:03 | 29                           | 40                  | 34              | 3                         |
+| 104          | 5           | 3           | 2        | 2020-01-08 21:00:29 | 2020-01-08 21:10:57 | 10                           | 15                  | 40              | 1                         |
+| 104          | 10          | 1           | 4        | 2020-01-11 18:34:49 | 2020-01-11 18:50:20 | 15                           | 10                  | 60              | 2                         |
+| 105          | 7           | 2           | 1        | 2020-01-08 21:20:29 | 2020-01-08 21:30:45 | 10                           | 25                  | 60              | 1                         |
++--------------+-------------+-------------+----------+---------------------+---------------------+------------------------------+---------------------+-----------------+---------------------------+
+
 ```
 5. If a Meat Lovers pizza was $12 and Vegetarian $10 fixed prices with no cost for extras and each runner is paid $0.30 per kilometre traveled - how much money does Pizza Runner have left over after these deliveries?
 

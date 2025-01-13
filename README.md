@@ -30,10 +30,10 @@ Learn more about the challenge here: [8 Week SQL Challenge](https://8weeksqlchal
 - Delivery performance analysis
 - Customer behavior insights
 
-**Skills** Inner join and Left join, subqueries, window functions, CTEs (Common Table Expressions), aggregations, self joins, Union.
+**Skills** Inner join and Left join, subqueries, window functions, CTEs (Common Table Expressions), aggregations, self joins, union.
 
 **Key Insights**:
-- [Link to Case Study #2 Solution](Case%20Study%20#2%20-%20Pizza%20Runner/pizza_runner_solutions.md)
+- [Link to Case Study #2 Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%232%20-%20Pizza%20Runner/pizza_runner_solutions.md)
 
 ---
 
@@ -41,7 +41,7 @@ Learn more about the challenge here: [8 Week SQL Challenge](https://8weeksqlchal
 | Case Study  | Status      | Link to Solution          |
 |-------------|-------------|---------------------------|
 | Danny's Diner | ✅ Completed | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%231%20-%20Dannys%20Diner/Dannys_diner_solutions.md) |
-| Pizza Runner | ✅ Completed | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%231%20-%20Dannys%20Diner/Dannys_diner_solutions.md) |                         |
+| Pizza Runner | ✅ Completed | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%232%20-%20Pizza%20Runner/pizza_runner_solutions.md) |                         |
 | Foodie-Fi    | ⏳ In Progress |                           |
 
 ---
