@@ -30,6 +30,10 @@ Learn more about the challenge here: [8 Week SQL Challenge](https://8weeksqlchal
 - Delivery performance analysis
 - Customer behavior insights
 
+**Skills** Inner join and Left join, subqueries, window functions, CTEs (Common Table Expressions), aggregations, self joins, Union.
+
+**Key Insights**:
+- [Link to Case Study #2 Solution](Case%20Study%20#2%20-%20Pizza%20Runner/pizza_runner_solutions.md)
 
 ---
 
@@ -37,10 +41,19 @@ Learn more about the challenge here: [8 Week SQL Challenge](https://8weeksqlchal
 | Case Study  | Status      | Link to Solution          |
 |-------------|-------------|---------------------------|
 | Danny's Diner | ✅ Completed | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%231%20-%20Dannys%20Diner/Dannys_diner_solutions.md) |
-| Pizza Runner | ⏳ In Progress |                           |
-| Foodie-Fi    | ❌ Not Started |                           |
+| Pizza Runner | ✅ Completed | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%231%20-%20Dannys%20Diner/Dannys_diner_solutions.md) |                         |
+| Foodie-Fi    | ⏳ In Progress |                           |
 
 ---
+## Learning Objectives
+
+Throughout this challenge, I have been focusing on:
+
+- Strengthening my **SQL skills** with practical real-world applications.
+- Gaining a deeper understanding of **joins**, **window functions**, **aggregations**, and **subqueries**.
+- Solving problems through **optimized queries** and ensuring efficient data handling.
+- Learning to break down complex tasks into manageable steps while working with large datasets.
+
 
 Feel free to explore the solutions and provide feedback!  
 Happy SQL querying! 😊

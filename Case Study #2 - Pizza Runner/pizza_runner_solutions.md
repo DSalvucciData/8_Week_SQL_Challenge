@@ -5,8 +5,11 @@
 [Queries Script](pizza_runner.sql)
 
 [A. Pizza Metrics Solutions](#a-pizza-metrics) 
+
 [B. Runner and Customer Experience Sol.](#b-runner-and-customer-experience)    
+
 [C. Ingredient Optimisation Sol.](#c-ingredient-optimisation)   
+
 [D. Pricing and Ratings Sol.](#d-pricing-and-ratings)
 
 ## ER-Diagram
