@@ -46,7 +46,7 @@ Learn more about the challenge here: [8 Week SQL Challenge](https://8weeksqlchal
 **Skills**: Subqueries, CTEs, aggregations, time-based analysis.
 
 **Key Insights**:
-- [Link to Case Study #3 Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%232%20-%20Foodie%20Fi/foodie_fi_solutions.md)
+- [Link to Case Study #3 Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%233%20-%20Foodie%20Fi/foodie_fi_solutions.md)
 
 ---
 
@@ -59,7 +59,7 @@ Learn more about the challenge here: [8 Week SQL Challenge](https://8weeksqlchal
 **Skills**: Joins, case statements, advanced filtering, aggregations.
 
 **Key Insights**:
-- [Link to Case Study #4 Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%232%20-%20Data%20Bank/data_bank_solutions.md)
+- [Link to Case Study #4 Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%234%20-%20Data%20Bank/data_bank_solutions.md)
 
 ---
 
@@ -68,8 +68,8 @@ Learn more about the challenge here: [8 Week SQL Challenge](https://8weeksqlchal
 |-------------|-------------|---------------------------|
 | Danny's Diner | ✅ Completed | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%231%20-%20Dannys%20Diner/Dannys_diner_solutions.md) |
 | Pizza Runner | ✅ Completed | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%232%20-%20Pizza%20Runner/pizza_runner_solutions.md) |                         |
-| Foodie-Fi    | ✅ In Progress | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%232%20-%20Foodie%20Fi/foodie_fi_solutions.md) |                          |
-| Data Bank    | ✅ Completed  | [Solutions](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%232%20-%20Data%20Bank/data_bank_solutions.md) |
+| Foodie-Fi    | ✅ In Progress | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%233%20-%20Foodie%20Fi/foodie_fi_solutions.md) |                          |
+| Data Bank    | ✅ Completed  | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%234%20-%20Data%20Bank/data_bank_solutions.md) |
 | Data Mart    | ⏳  In Progress |
 ---
 ## Learning Objectives
