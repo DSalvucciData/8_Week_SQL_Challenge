@@ -60,17 +60,31 @@ Learn more about the challenge here: [8 Week SQL Challenge](https://8weeksqlchal
 
 **Key Insights**:
 - [Link to Case Study #4 Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%234%20-%20Data%20Bank/data_bank_solutions.md)
-
+  
 ---
 
+### Case Study #5: Data Mart 🛒  
+**Objective**: Analyze supermarket sales data to optimize inventory management and understand customer purchasing behavior.  
+
+**Topics Covered**:  
+- Sales performance analysis  
+- Customer purchasing patterns  
+- Inventory management  
+
+**Skills**: Joins, window functions, subqueries, aggregations, case statements.  
+
+**Key Insights**:  
+- [Link to Case Study #5 Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%235%20-%20Data%20Mart/data_mart_solutions.md)  
+
+
 ## Progress Tracker
-| Case Study  | Status      | Link to Solution          |
-|-------------|-------------|---------------------------|
-| Danny's Diner | ✅ Completed | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%231%20-%20Dannys%20Diner/Dannys_diner_solutions.md) |
-| Pizza Runner | ✅ Completed | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%232%20-%20Pizza%20Runner/pizza_runner_solutions.md) |                         |
-| Foodie-Fi    | ✅ In Progress | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%233%20-%20Foodie%20Fi/foodie_fi_solutions.md) |                          |
-| Data Bank    | ✅ Completed  | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%234%20-%20Data%20Bank/data_bank_solutions.md) |
-| Data Mart    | ⏳  In Progress |
+| Case Study    | Status        | Link to Solution                                                                                                                               |
+| ------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Danny's Diner | ✅ Completed   | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%231%20-%20Dannys%20Diner/Dannys_diner_solutions.md) |
+| Pizza Runner  | ✅ Completed   | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%232%20-%20Pizza%20Runner/pizza_runner_solutions.md) |  |
+| Foodie-Fi     | ✅ In Progress | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%233%20-%20Foodie%20Fi/foodie_fi_solutions.md)       |  |
+| Data Bank     | ✅ Completed   | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%234%20-%20Data%20Bank/data_bank_solutions.md)       |
+| Data Mart     | ✅ Completed   | [Solution](https://github.com/DSalvucciData/8_Week_SQL_Challenge/blob/main/Case%20Study%20%235%20-%20Data%20Mart/data_mart_solutions.md)       |
 ---
 ## Learning Objectives
 
